@@ -8,11 +8,12 @@ use yii\helpers\Html;
 class Share extends Widget {
 
     public function run() {
-        echo Html::beginTag($this->tag , $this->htmlOptions);
+        $html =  Html::beginTag($this->tag , $this->htmlOptions);
         foreach ($this->networks as $key => $val) {
-            echo $this->parseTemplate($key);
+            $html .= $this->parseTemplate($key);
         }
-        echo Html::endTag($this->tag);
+        $html .= Html::endTag($this->tag);
+        return $html;
     }
 
 }

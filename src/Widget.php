@@ -13,7 +13,7 @@ class Widget extends \yii\base\Widget {
     public $text = 'Share on {network}';
     public $type = 'small';
     public $template = '<li>{button}</li>';
-    public $htmlOptions = [];
+    public $htmlOptions = ['class'=>'social-share'];
     protected $networks = [
         'facebook' => 'https://www.facebook.com/sharer/sharer.php?u={url}',
         'google-plus' => 'https://plus.google.com/share?url={url}',
